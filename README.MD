@@ -1,4 +1,4 @@
-In order to run this script please install Docker
+In order to run this script please install [Docker](https://docs.docker.com/desktop/install/windows-install/)
 
 Then open Init.bat file
 
