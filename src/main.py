@@ -13,6 +13,7 @@ while (not success):
 
     if choice != "1" and choice != "2" and choice != "3":
         print(Fore.RED + "Wrong answer !")
+        print(Style.RESET_ALL)
         print()
     else :
         if choice == "3":
