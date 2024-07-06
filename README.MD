@@ -10,5 +10,5 @@ To use the script double click on the ```Downloader.bat``` it will open an inter
 
 When you are done downloading press 3 to exit to script, it will put everyting you just download into the target folder
 
-<p style="text-align: center;"> # UwU </p>
+<h1 style="text-align: center;">UwU</h1>
 
