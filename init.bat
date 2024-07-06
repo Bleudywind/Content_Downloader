@@ -1,5 +1,5 @@
-docker build -t yt-converter src
-mkdir src/Musiques
-mkdir src/Video
-mkdir target/Musiques
-mkdir target/Video
+docker build -t yt-converter .
+@if not exist src/Musiques md "src\Musiques"
+@if not exist src/Video md "src\Video"
+@if not exist target/Musiques md "target\Musiques"
+@if not exist target/Video md "target\Video"
