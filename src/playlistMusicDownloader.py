@@ -1,7 +1,7 @@
 import os
 import sys
 import subprocess
-from pytube import Playlist
+from pytubefix import Playlist
 from fnmatch import fnmatch
 
 # https://www.youtube.com/playlist?list=PL2c5UJq64ZpHeSeD8HPyMSdsj06B5aNKx Marc Rebillet to test
@@ -55,8 +55,9 @@ for video in playlist.videos:
     try:
         print(str(i) + ". " + video.title)
         video.streams.get_audio_only().download('./Musiques/Default')
-    except:
+    except e:
         print("Could not download a video")
+        print(e)
     i = i + 1
 
 print("The playlist is downloaded !")
