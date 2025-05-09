@@ -8,6 +8,7 @@ from fnmatch import fnmatch
 print()
 patternMp4 = "*.mp4"
 patternMp3 = "*.mp3"
+patternMp4a = "*.m4a"
 
 try:
     playlistName = sys.argv[1]
@@ -55,7 +56,7 @@ for video in playlist.videos:
     try:
         print(str(i) + ". " + video.title)
         video.streams.get_audio_only().download('./Musiques/Default')
-    except e:
+    except Exception as e:
         print("Could not download a video")
         print(e)
     i = i + 1
@@ -98,7 +99,7 @@ if newDirectory:
 
 for path, subdirs, files in os.walk('Musiques/Default'):
     for name in files:
-        if fnmatch(name, patternMp4):
+        if fnmatch(name, patternMp4a):
             try:
                 os.rename(os.path.join(path, name), os.path.join(directoryName, name))
             except Exception as e:
